@@ -3,7 +3,6 @@ import Product from "../../../domain/product/entity/product";
 import ProductModel from "../../../infrastructure/product/repository/sequelize/product.model";
 import ProductRepository from "../../../infrastructure/product/repository/sequelize/product.repository";
 import FindProductUseCase from "./find.product.usecase";
-import { number } from "yup";
 
 describe("Test find product use case", () => {
     let sequelize: Sequelize;
@@ -38,7 +37,7 @@ describe("Test find product use case", () => {
         const output = {
             id: "123",
             name: "Product 1",
-            price: 100,
+            price: 100
         };
 
         const result = await usecase.execute(input);
